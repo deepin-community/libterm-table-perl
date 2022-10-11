@@ -1,0 +1,29 @@
+Source: libterm-table-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>,
+           Salvatore Bonaccorso <carnil@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 12)
+Build-Depends-Indep: libimporter-perl <!nocheck>,
+                     libtest-simple-perl (>= 1.302097) <!nocheck>,
+                     libunicode-linebreak-perl <!nocheck>,
+                     perl
+Standards-Version: 4.4.1
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libterm-table-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libterm-table-perl.git
+Homepage: https://metacpan.org/release/Term-Table
+Rules-Requires-Root: no
+
+Package: libterm-table-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         libimporter-perl
+Recommends: libunicode-linebreak-perl
+Description: module to format a header and rows into a table
+ The Term::Table module is able to generically format rows of data into
+ tables. This is used in test suites by some failing tests to provide
+ diagnostics about what has gone wrong but can also be used in all kinds of
+ other contexts.
